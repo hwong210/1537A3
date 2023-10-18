@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hason Wong"/>
+    <meta name="description" content="Reverse Engineering a Layout"/>
     <title>CSS Grid</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="styles/style.css">
+    
 </head>
-<body>
+<body style="background-color: rgba(49, 42, 42, 0.788);">
     <div class="container">
-        <div id="logo">XD</div>
-        <nav>Navbar</nav>
-        <main class="main">Main</main>
-        <div id="sidebar">Sidebar</div>
-        <div id="content1">1</div>
-        <div id="content2">2</div>
-        <div id="content3">3</div>
-        <div id="content4">4</div>
-        <footer>Footer</footer>
+        <div id="title">
+            <h1>Detailed Analysis of Interstellar</h1>
+        </div>
+        <div id="logo">
+            <img src="images/logo.jpg" alt="Webpage logo"/>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#title">Home Page</a></li>
+                <li><a href="#content1">Plot and Summary</a></li>
+                <li><a href="#content2">Scientific Accuracy</a></li>
+                <li><a href="#content3">Cinematography</a></li>
+                <li><a href="#content4">Musical Score</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div id="main">
+            <figure>
+                <img src="images\bg.jpg" alt="Still shot from Interstellar">
+                <figcaption style="text-align: center;">Still shot from the movie Interstellar</figcaption>
+            </figure>
+        </div>
+        <aside id="sidebar">
+            <h3>Subscribe for more Anlyses!</h3>
+            <form action="/subscribe">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Subscribe">
+            </form>
+        </aside>
+        <div id="content1">
+            <img src="images/interstellar.jpg" alt="Interstellar Movie Poster"/>
+            <h3>Plot and Summary</h3>
+            <p>In 'Interstellar,' Earth is facing an environmental catastrophe, and a former NASA pilot embarks on a space mission through a wormhole to find new habitable planets for humanity. As he journeys through different dimensions and relativity, he grapples with the passage of time, love, and the survival of the human species.</p>
+        </div>
+        <div id="content2">
+            <img src="images/blackhole.jpg" alt="Actual picture vs movie rendered image of blackhole"/>
+            <h3>Scientific Accuracy</h3>
+            <p>"Interstellar" strives for a high level of scientific accuracy in its portrayal of astrophysics and relativity. The film consults with scientific experts and incorporates real scientific concepts, such as wormholes, black holes, and time dilation, to create a visually stunning and scientifically grounded representation of space and time. While some artistic liberties are taken for dramatic effect, the film's commitment to scientific realism is notable and contributes to its immersive storytelling and awe-inspiring visuals, making it a commendable endeavor in merging science and cinema.</p>
+        </div>
+        <div id="content3">
+            <img src="images/cinematography.jpg" alt="Interstellar frame with cameraman"/>
+            <h3>Cinematography</h3>
+            <p>"Interstellar" features stunning and visually captivating cinematography by Hoyte van Hoytema, with a focus on showcasing the grandeur of space and celestial bodies. The film employs a combination of practical effects, large-scale models, and digital wizardry to create breathtaking scenes, including a striking representation of a rotating black hole and its gravitational lensing effects. The cinematography captures both the vastness of interstellar space and the emotional depth of the characters, resulting in a visually mesmerizing cinematic experience. Christopher Nolan's collaboration with Hoytema has resulted in a movie that is not only a visual spectacle but also a testament to the power of cinematography in storytelling.</p>
+        </div>
+        <div id="content4">
+            <img src="images/zimmer.jpg" alt="Hans Zimmer playing piano"/>
+            <h3>Musical Score</h3>
+            <p>Hans Zimmer's musical score for "Interstellar" is a masterful and emotionally resonant composition that elevates the film's storytelling to new heights. The score is characterized by its haunting organ music, powerful crescendos, and a fusion of electronic and orchestral elements. Zimmer's music expertly underscores the film's themes of love, exploration, and the vast unknown of space, creating a deeply immersive and atmospheric experience. The soundtrack not only complements the visuals but also serves as a narrative force, enhancing the emotional impact of the film and drawing viewers into the epic journey of "Interstellar." It is a musical masterpiece that lingers in the minds of audiences long after the credits roll.</p>
+        </div>
+        <footer>Copyright (C) 2023. All rights reserved.</footer>
     </div>
 </body>
 </html>

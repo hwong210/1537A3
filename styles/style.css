@@ -1,86 +1,154 @@
+
 .container{
     display:grid;
     height:100vh;
-    grid-template-columns:0.2fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1fr 0.2fr;
+    width:100vw;
+    grid-template-columns:0.4fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.5fr 0.2fr 1fr 0.2fr;
     grid-template-areas: 
-    "logo nav nav nav nav"
-    "sidebar main main main main"
-    "sidebar content1 content2 content3 content4"
-    "sidebar footer footer footer footer";
-    grid-gap: 0.2rem;
+    "logo title title title title"
+    "nav main main main main"
+    "nav sidebar sidebar sidebar sidebar"
+    "nav content1 content2 content3 content4"
+    "nav footer footer footer footer";
+    gap: 0.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h3{
+    text-align: center;
+    align-self: center;
 }
 
 #logo{
-    background-color: rgb(43, 115, 179);
     grid-area: logo;
+    margin: auto;
+}
+
+#title{
+    grid-area: title;
+    align-items: center;
+    justify-content: center; 
+    font-size: 28px;
 }
 
 nav{
-    background-color: aqua;
+    background-color: rgb(171, 81, 32, 0.5);
     grid-area: nav;
+    border-radius: 5px;
+    margin: auto;
+    padding-right: 10px;
 }
 
-main{
-    background-color: aquamarine;
+#main{
     grid-area: main;
+    width: 110%;
+    height: 100%;
 }
 
-#sidebar {
-    background-color: azure;
+a[href] {text-decoration: underline;}
+            a:link { color: rgb(0, 0, 0); }
+            a:visited { color: rgb(0, 0, 0); }
+            a:hover { color: lime; }
+            a:active { color: red; }
+
+#sidebar{
+    background-color: rgb(126, 115, 80);
+    text-align: center;
     grid-area: sidebar;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+ul {
+    list-style: none; 
+}
+
+li {
+    padding: 10px; 
+    margin-bottom: 10px; 
 }
 
 #content1 {
-    background-color: bisque;
+    background-color: rgb(231, 246, 238, 0.5);
     grid-area: content1;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #content2 {
-    background-color: blanchedalmond;
+    background-color: rgb(143, 153, 145, 0.5);
     grid-area: content2;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #content3 {
-    background-color: burlywood;
+    background-color: rgb(229, 242, 233, 0.5);
     grid-area: content3;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 #content4 {
-    background-color: rgb(198, 114, 4);
+    background-color: rgb(166, 130, 105, 0.5);
     grid-area: content4;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 footer {
-    background-color: cadetblue;
+    background-color: rgb(70, 38, 23, 0.5);
     grid-area: footer;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 700px) {
     .container{
         grid-template-columns: 0.2fr 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows: 0.2fr 0.2fr 2fr 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
         grid-template-areas: 
-        "logo nav"
-        "sidebar sidebar"
+        "nav nav"
+        "logo logo"
+        "title title"
         "main main"
+        "sidebar sidebar"
         "content1 content1"
         "content2 content2"
         "content3 content3"
         "content4 content4"
         "footer footer";
     }
+
+    ul {
+        display: flex; 
+    }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 1280px) {
     .container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.2fr 0.2fr 1.5fr 1fr 0.1fr;
+        grid-template-rows: 0.1fr 1.5fr 0.2fr 1fr 0.2fr;
         grid-template-areas: 
         "logo nav nav nav"
-        "sidebar sidebar sidebar sidebar"
+        "title title title title"
         "main main main main"
+        "sidebar sidebar sidebar sidebar"
         "content1 content2 content3 content4"
         "footer footer footer footer";
+    }
+
+    ul {
+        display: flex; 
     }
 }
